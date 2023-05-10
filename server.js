@@ -7,7 +7,7 @@ require('dotenv').config();
 const pg = require('pg');
 
 server.use(cors())   // Middleware function 
-let PORT = 3005
+let PORT = process.env.PORT || 3005; 
 const axios = require('axios');
 const recipeData = require('./data.json'); 
 const apiKey = process.env.APIkey;
